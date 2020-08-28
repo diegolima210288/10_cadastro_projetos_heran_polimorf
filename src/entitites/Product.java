@@ -12,7 +12,6 @@ public class Product {
 
 	//metodo com argumentos
 	public Product(String name, Double price) {
-		super();
 		this.name = name;
 		this.price = price;
 	}
@@ -36,9 +35,9 @@ public class Product {
 	
 	//metodo para apresentar os dados do arguemento (etiqueta do produto)
 	public String priceTag() {
-		return name
+		return getName()
 				+" $ "
-				+price;
+				+getPrice();
 	}
 	
 }

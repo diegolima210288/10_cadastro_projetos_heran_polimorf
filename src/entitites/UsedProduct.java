@@ -6,7 +6,7 @@ public final class UsedProduct extends Product{
 	
 	private Date manufactureDate;
 	
-	private Product product = new Product();
+	//private Product product = new Product();
 	
 	//metodo padrão
 	public UsedProduct() {
@@ -31,10 +31,10 @@ public final class UsedProduct extends Product{
 	//Polimorfismos: utilização do método generico da superclasse e adicionando mais informações
 	@Override
 	public String priceTag() {
-		super.priceTag();
-		return product.getName()
+		//super.priceTag();
+		return getName()  //não é necessário indicar que é da classe principal
 				+" $ "
-				+product.getPrice()
+				+getPrice() //não é necessário indicar que é da classe principal
 				+" (Manufacture date: "
 				+manufactureDate
 				+")";

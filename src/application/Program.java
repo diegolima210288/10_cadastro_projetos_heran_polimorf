@@ -30,8 +30,8 @@ public class Program {
 			System.out.print("Common, used or imported (c/u/i)? ");
 			char type = sc.next().charAt(0);
 			System.out.print("Name: ");
-			String name = sc.nextLine();
 			sc.nextLine();
+			String name = sc.nextLine();
 			System.out.print("Price: ");
 			double price = sc.nextDouble();
 			
@@ -57,7 +57,7 @@ public class Program {
 		System.out.println();
 		System.out.println("PRICE TAGS: ");
 		for (Product obj: list) {
-			System.out.println(obj.getName());
+			System.out.println(obj.priceTag());
 		}
 		
 		sc.close();

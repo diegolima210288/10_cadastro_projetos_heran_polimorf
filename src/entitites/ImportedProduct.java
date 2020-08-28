@@ -5,7 +5,7 @@ public final class ImportedProduct extends Product{
 	
 	public Double customsFee;
 	
-	private Product product = new Product();
+	//private Product product = new Product();
 	
 	//metodo padrão
 	public ImportedProduct() {
@@ -30,18 +30,18 @@ public final class ImportedProduct extends Product{
 	//Polimorfismos: utilização do método generico da superclasse e adicionando mais informações
 	@Override
 	public String priceTag() {
-		super.priceTag();		
-		return product.getName()
+		//super.priceTag();		
+		return getName() //não é necessário indicar que é da classe principal
 				+" $ "
-				+totalPrice()
-				+"(Customs fee: $"
+				+totalPrice()  //não é necessário indicar que é da classe principal
+				+" (Customs fee: $ "
 				+customsFee
 				+")";
 	}
 	
 	//metodo para apresentar o preço total do produto importado
 	public Double totalPrice() {
-		return product.getPrice() + customsFee;
+		return getPrice() + customsFee;
 	}
 	
 	
